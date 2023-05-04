@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="input.css">    
+</head>
+<body>
+    <div>
+        <div class="flex">
+            <div id="menu" class="md:w-96 md:block p-4 hidden w-1/2">
+                <div class="space-y-16">
+                    <div class="text-blue-500 justify-evenly flex text-center">
+                        <svg class="w-9 h-89" fill="#1775F1" stroke="white" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"></path>
+                        </svg>
+                       
+                        <h1 class="md:text-4xl md:mt-0 mt-2 font-bold">AdminSite</h1>                                       
+                    </div>
+                    <div class="space-y-6">
+                        <div class="border md:h-14 h-12 rounded-xl flex md:space-x-6 md:p-3 p-1 text-center cursor-pointer bg-blue-500 text-poppins">
+                            <svg class="w-5 h-5 mt-1 md:ml-7" fill="#F0FDFD" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 9.999V20C22 20.5523 21.5523 21 21 21H13V9.999H22ZM11 15.999V21H3C2.44772 21 2 20.5523 2 20V15.999H11ZM11 3V13.999H2V4C2 3.44772 2.44772 3 3 3H11ZM21 3C21.5523 3 22 3.44772 22 4V7.999H13V3H21Z"></path></svg>                          
+                            <p class="text-[#F0FDFD] text-xl">Dashboard</p>
+                        </div>
+                       <h1 class="md:text-base text-sm text-[#B5968D] md:font-bold">MAIN</h1>
+                    </div>
+                </div>
+                <div onclick="openTab()" class="h-12 border-collapse md:space-x-6 md:h-14 rounded-xl text-black flex md:p-3 p-2 cursor-pointer hover:bg-blue-500 hover:text-[#F0FDFD]  bg-[#F1F0F6] text-poppins">
+                    <svg class="w-5 h-5 mt-1 md:ml-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3ZM9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12H20V5H4V12H9Z"></path></svg>
+                    <p class=" text-xl">Elements</p>
+                    <svg class="md:w-5 md:h-5 md:mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"></path></svg>
+                </div>
+                <div id="elements" class="text-black hidden  cursor-pointer">
+                    <ul  class="flex flex-col items-center">
+                     <li class="hover:text-blue-400 border-collapse rounded-lg h-12 w-40">Alert</li>
+                     <li class="hover:text-blue-400 border-collapse rounded-lg h-12 w-40">Badges</li>
+                     <li class="hover:text-blue-400 border-collapse rounded-lg h-12 w-40">Breadcrumbs</li>
+                     <li class="hover:text-blue-400 border-collapse rounded-lg h-12 w-40">Button</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center cursor-pointer">
+                    <div class="border-collapse flex rounded-xl mt-4 md:w-72 w-32 space-x-3 text-black md:space-x-6 p-2 h-14 hover:bg-[#F1F0F6] text-poppins">
+                        <svg class="w-5 h-5 mt-1 md:ml-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.00488 3.00293H21.0049C21.5572 3.00293 22.0049 3.45064 22.0049 4.00293V20.0029C22.0049 20.5552 21.5572 21.0029 21.0049 21.0029H3.00488C2.4526 21.0029 2.00488 20.5552 2.00488 20.0029V4.00293C2.00488 3.45064 2.4526 3.00293 3.00488 3.00293ZM14.7978 9.79582L12.348 12.2456L10.2267 10.1243L5.98407 14.3669L7.39828 15.7811L10.2267 12.9527L12.348 15.074L16.212 11.21L18.0049 13.0029V8.00293H13.0049L14.7978 9.79582Z"></path></svg>
+                        <p>Charts</p>
+                    </div>
+                    <div class="border-collapse rounded-xl mt-4 flex  md:w-72 w-32 space-x-3  text-black p-2 h-12 hover:bg-[#F1F0F6] text-poppins">
+                        <svg class="w-5 h-5 mt-1 md:ml-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3H11V11H3V3ZM3 13H11V21H3V13ZM13 3H21V11H13V3ZM13 13H21V21H13V13Z"></path></svg>
+                        <p>Widgets</p>
+                    </div>
+                </div>
+                <h1 class="md:text-base text-sm text-[#B5968D] md:font-bold">TABLE AND FORMS</h1>
+                <div>
+                    <div class="border-collapse mt-2 rounded-xl md:space-x-6 space-x-3 cursor-pointer flex text-black p-2 h-12 hover:bg-[#F1F0F6] text-poppins">
+                        <svg class="w-5 h-5 mt-1 md:ml-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 8H20V5H4V8ZM14 19V10H10V19H14ZM16 19H20V10H16V19ZM8 19V10H4V19H8ZM3 3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3Z"></path></svg>
+                        <p>Tables</p>
+                    </div>
+                    <div onclick="closeTab()" class="border-collapse mt-4 md:space-x-6 space-x-3 rounded-xl flex bg-[#F1F0F6] cursor-pointer hover:text-white font-bold text-black p-2 h-12 hover:bg-blue-500 text-poppins">
+                        <svg class="w-5 h-5 mt-1 md:ml-9" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V3C3 2.44772 3.44772 2 4 2H7V0H9V2H15V0H17V2ZM7 8V10H17V8H7ZM7 12V14H17V12H7Z"></path></svg>
+                        <p>Forms</p>
+                         <svg class="md:w-5 md:h-5 md:mt-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"></path></svg>
+                    </div>
+                    <div id="forms" class="text-black hidden cursor-pointer">
+                            <ul class="flex flex-col items-center">
+                             <li class="hover:text-blue-400 border-collapse rounded-lg h-12 w-40">Basic</li>
+                             <li class="hover:text-blue-400 border-collapse rounded-lg h-12 w-40">Select</li>
+                             <li class="hover:text-blue-400 border-collapse rounded-lg h-12 w-40">Checkbox</li>
+                             <li class="hover:text-blue-400 border-collapse rounded-lg h-12 w-40">Radio</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full">
+                <div  class="md:flex justify-evenly">                    
+                    <div class="flex justify-evenly md:mt-0 mt-4">
+                        <div class="" onclick="myFunction()">
+                            <svg class="w-4 h-4 md:first-letter:h-8 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+                        </div>
+                        <div class="mb-3">
+                            <input
+                              type="search"
+                              class="relative bg-[#E9E9FD] rounded-lg m-0 md:h-12 block md:w-80 min-w-0 flex-auto border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                              id="exampleSearch"
+                              placeholder="Search..." />
+                            </input>
+                        </div>                      
+                    </div>
+                    <div>
+                       <div class="md:block hidden mt-4">
+                           <button class="bg-red-500 rounded-full w-6">5</button>
+                           <button class="bg-red-500 rounded-full w-6">8</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[#F1F0F6] p-8">
+                    <div class="md:font-semibold md:text-2xl">
+                        <h1>Dashboard</h1>                                     
+                    </div>
+                    <div class="flex mt-6">
+                        <h4 class="text-blue-300">Home</h4>
+                        <h4>/ Dashboard</h4>
+                    </div>
+                    <div class="md:flex justify-evenly md:p-4 md:mt-0 mt-3 md:space-y-0 space-y-6 ml-0">
+                        <div class="box-border md:p-8 p-4 w-full h-28 md:w-80 md:h-52 bg-white rounded-2xl">                                
+                            <div class="flex justify-between">
+                                <p class="md:font-bold md:text-2xl">1500</p>
+                                <svg class="md:w-8 w-6" fill="none" stroke="#91D43A" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"></path>
+                                </svg>
+                            </div>
+                            <p class="md:mt-2 md:text-lg">Traffic</p>
+                            <div class="flex justify-center md:mt-6 mt-1">
+                                <div class="bg-blue-400 md:h-3 h-2 rounded-l-lg md:w-24 w-20"></div>
+                                <div class="bg-[#F1F0F6] md:h-3 h-2 rounded-r-lg md:w-40 w-32"></div>
+                            </div>
+                            <p class="font-bold md:text-xl text-xs">40%</p>                        
+                        </div>
+                        <div class="box-border md:p-8 p-4 w-full h-28 md:w-80 md:h-52 bg-white rounded-2xl">
+                            <div class="flex justify-between">
+                                <p class="md:font-bold md:text-2xl">234</p>
+                                <svg class="md:w-8 w-6" fill="none" stroke="#FC3B56" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6L9 12.75l4.286-4.286a11.948 11.948 0 014.306 6.43l.776 2.898m0 0l3.182-5.511m-3.182 5.51l-5.511-3.181"></path>
+                                  </svg>
+                            </div>
+                            <p class="md:mt-2 md:text-lg">Sales</p>
+                            <div class="flex justify-center md:mt-6 mt-1">
+                                <div class="bg-blue-400 md:h-3 h-2 rounded-l-lg md:w-36 w-40"></div>
+                                <div class="bg-[#F1F0F6] md:h-3 h-2 rounded-r-lg md:w-28 w-36"></div>
+                            </div>
+                            <p class="font-bold md:text-xl text-sm">60%</p>                        
+                        </div>
+                        <div class="box-border md:p-8 p-4 h-28 w-full md:w-80 md:h-52 bg-white rounded-2xl">
+                            <div class="flex justify-between">
+                                <p class="md:font-bold md:text-2xl">465</p>
+                                <svg class="md:w-8 w-6" fill="none" stroke="#91D43A" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"></path>
+                                </svg>
+                            </div>
+                            <p class="md:mt-2 md:text-lg">Pageviews</p>
+                            <div class="flex justify-center md:mt-6 mt-1">
+                                <div class="bg-blue-400 md:h-3 h-2 rounded-l-lg md:w-16 w-16"></div>
+                                <div class="bg-[#F1F0F6] md:h-3 h-2 rounded-r-lg md:w-48 w-32"></div>
+                            </div>
+                            <p class="font-bold md:text-xl text-sm">30%</p>                        
+                        </div>
+                        <div class="box-border md:p-8 p-4 h-28 w-full md:w-80 md:h-52 bg-white rounded-2xl">
+                            <div class="flex justify-between">
+                                <p class="md:font-bold md:text-2xl">235</p>
+                                <svg class="md:w-8 w-6" fill="none" stroke="#91D43A" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"></path>
+                                </svg>
+                            </div>
+                            <p class="md:mt-2 md:text-lg">Visitors</p>
+                            <div class="flex justify-center md:mt-6 mt-1">
+                                <div class="bg-blue-400 md:h-3 h-2 rounded-l-lg md:w-52 w-48"></div>
+                                <div class="bg-[#F1F0F6] md:h-3 h-2 rounded-r-lg md:w-20 w-20"></div>
+                            </div>
+                            <p class="font-bold md:text-xl text-sm">80%</p>                        
+                        </div>
+                    </div> 
+
+                    <div class="md:flex md:space-x-4">
+                        <div class="box-border w-1/2 bg-white ">
+                            <div><canvas id="myChart"></canvas></div>
+                                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <script>
+                                const ctx = document.getElementById('myChart');
+
+                                new Chart(ctx, {
+                                    type: 'bar',
+                                    data: {
+                                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                                    datasets: [{
+                                        label: '# of Votes',
+                                        data: [12, 19, 3, 5, 2, 3],
+                                        borderWidth: 1
+                                    }]
+                                    },
+                                    options: {
+                                    scales: {
+                                        y: {
+                                        beginAtZero: true
+                                        }
+                                                                    }
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="box-border rounded-xl bg-white w-full md:w-1/2">
+                            <div>
+                                <h1 class="text-3xl mt-4 p-4 font-semibold">Chatbox</h1>
+                            </div>
+                            <div class="flex justify-center md:mt-8">
+                                <button class="w-20 h-10 rounded-3xl bg-[#D0E4FF] text-[#3581F2] text-center">Today</button>
+                            </div>
+                            <div class="flex p-4 space-x-2">
+                                <img class="w-10 h-10 rounded-full" src="https://picsum.photos/200" alt="">
+                                <div>
+                                    <p class="font-bold text-lg">Alan</p>
+                                    <div class="mt-0 ">
+                                        <div class="w-20 rounded-bl-xl rounded-tr-xl rounded-br-xl text-white text-center p-2  font-semibold h-12 bg-[#1775F1]">Hello</div>
+                                    </div>
+                                </div>
+                                <p class="font-light">18:30</p>
+                            </div>
+                            <div class="flex flex-col items-end mr-2 md:mr-4">
+                                <p>18:30</p>
+                                <p class="box-border font-normal md:w-[600px] w-48 p-2 rounded-bl-lg rounded-tl-lg rounded-br-lg md:text-2xl md:p-4 bg-[#F1F0F6]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum eos quam dolores eligendi exercitationem animi nobis reprehenderit laborum! Nulla.</p>
+                            </div>
+                            <div class="flex flex-col items-end mr-2 md:mr-4">
+                                <p>18:30</p>
+                                <p class="box-border font-normal md:w-[600px] w-48 p-2 rounded-bl-lg rounded-tl-lg rounded-br-lg md:text-2xl md:p-4 bg-[#F1F0F6]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, architecto!</p>
+                            </div>
+                            <div class="flex flex-col items-end mr-2 md:mr-4">
+                                <p>18:30</p>
+                                <p class="box-border font-normal md:w-[350px] w-48 p-2 text-end rounded-bl-lg rounded-tl-lg rounded-br-lg md:text-2xl md:p-2 bg-[#F1F0F6]">Lorem ipsum, dolor sit amet.</p>
+                            </div>
+                            <div>
+                                <div class="flex md:space-x-4 space-x-2 mt-2 mb-4 justify-end mr-2 md:mr-4">
+                                    <div>
+                                        <input
+                                           type="text"
+                                           class="relative bg-[#F1F0F6] rounded-lg m-0 md:h-14 block md:w-[600px] min-w-0 w-36 flex-auto border border-solid border-neutral-300 bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                                           id="exampleSearch"
+                                           placeholder="Type..." />
+                                        </input>
+                                    </div>
+                                    <div class="md:w-14 w-8 h-8 md:h-14 flex justify-center bg-[#1775F1]">
+                                        <svg class="w-6" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"></path>
+                                          </svg>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                              
+            </div>
+        </div>        
+
+       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>  
+    <script src="./index.js"></script>
+</body>
+</html>
